@@ -38,7 +38,7 @@ class Favorite(db.Model):
     character_id: Mapped[int] = mapped_column(ForeignKey("character.id"), nullable=True)
     planet_id: Mapped[int] = mapped_column(ForeignKey("planet.id"), nullable=True)
 
-# 🔄 Genera el diagrama
+# Genera el diagrama
 try:
     render_er(db.Model, "diagram.png")
     print("✅ Diagrama generado exitosamente como diagram.png")
